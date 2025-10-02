@@ -535,6 +535,7 @@ export default function PowerRankingsPage() {
                             alt={t.name}
                             width={28}
                             height={28}
+                            unoptimized
                             className='object-contain flex-shrink-0'
                             onError={(e) => {
                               ;(e.currentTarget as HTMLImageElement).src =
@@ -612,6 +613,7 @@ export default function PowerRankingsPage() {
                             className='object-contain flex-shrink-0'
                             width={28}
                             height={28}
+                            unoptimized
                             onError={(e) => {
                               ;(e.currentTarget as HTMLImageElement).src =
                                 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="28" height="28"%3E%3Ctext y="22" font-size="20"%3E🏈%3C/text%3E%3C/svg%3E'
@@ -714,6 +716,7 @@ export default function PowerRankingsPage() {
                             alt={team.name}
                             width={288}
                             height={48}
+                            unoptimized
                             className='absolute inset-0 w-full h-full object-cover'
                             onError={(e) => {
                               ;(
@@ -728,6 +731,7 @@ export default function PowerRankingsPage() {
                                 alt={team.name}
                                 width={36}
                                 height={36}
+                                unoptimized
                                 className='h-9 w-9 object-contain flex-shrink-0 drop-shadow-xl'
                                 onError={(e) => {
                                   ;(e.currentTarget as HTMLImageElement).src =

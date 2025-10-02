@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Moon, Sun } from 'lucide-react'
+import Image from 'next/image'
 
 /** =========================
  * Types & Constants
@@ -274,7 +275,7 @@ const IDS_BY_DIVISION = DIVISIONS.reduce<Record<DivisionKey, string[]>>(
     acc[d] = TEAMS.filter((t) => t.division === d).map((t) => t.id)
     return acc
   },
-  {} as any
+  {} as Record<DivisionKey, string[]>
 )
 
 const AFC_DIVISIONS: DivisionKey[] = [
@@ -427,13 +428,6 @@ export default function PowerRankingsPage() {
   )
   const filterLower = filter.trim().toLowerCase()
 
-  const columns = [
-    grid.slice(0, 8),
-    grid.slice(8, 16),
-    grid.slice(16, 24),
-    grid.slice(24, 32),
-  ]
-
   const isDark = theme === 'dark'
 
   return (
@@ -536,7 +530,7 @@ export default function PowerRankingsPage() {
                                 }`,
                           ].join(' ')}
                         >
-                          <img
+                          <Image
                             src={`/teamlogos/${t.slug}.png`}
                             alt={t.name}
                             className='h-7 w-7 object-contain flex-shrink-0'
@@ -610,7 +604,7 @@ export default function PowerRankingsPage() {
                                 }`,
                           ].join(' ')}
                         >
-                          <img
+                          <Image
                             src={`/teamlogos/${t.slug}.png`}
                             alt={t.name}
                             className='h-7 w-7 object-contain flex-shrink-0'
@@ -711,7 +705,7 @@ export default function PowerRankingsPage() {
                         className='cursor-grab active:cursor-grabbing h-full group'
                       >
                         <div className='relative h-full'>
-                          <img
+                          <Image
                             src={`/teamrankingbars/${team.slug}_Ranking.png`}
                             alt={team.name}
                             className='absolute inset-0 w-full h-full object-cover'
@@ -723,7 +717,7 @@ export default function PowerRankingsPage() {
                           />
                           <div className='absolute inset-0 flex items-center justify-between px-3 gap-2'>
                             <div className='flex items-center gap-2 flex-1 min-w-0'>
-                              <img
+                              <Image
                                 src={`/teamlogos/${team.slug}.png`}
                                 alt={team.name}
                                 className='h-9 w-9 object-contain flex-shrink-0 drop-shadow-xl'

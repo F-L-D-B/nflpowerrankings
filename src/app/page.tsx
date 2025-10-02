@@ -533,7 +533,9 @@ export default function PowerRankingsPage() {
                           <Image
                             src={`/teamlogos/${t.slug}.png`}
                             alt={t.name}
-                            className='h-7 w-7 object-contain flex-shrink-0'
+                            width={28}
+                            height={28}
+                            className='object-contain flex-shrink-0'
                             onError={(e) => {
                               ;(e.currentTarget as HTMLImageElement).src =
                                 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="28" height="28"%3E%3Ctext y="22" font-size="20"%3E🏈%3C/text%3E%3C/svg%3E'
@@ -607,7 +609,9 @@ export default function PowerRankingsPage() {
                           <Image
                             src={`/teamlogos/${t.slug}.png`}
                             alt={t.name}
-                            className='h-7 w-7 object-contain flex-shrink-0'
+                            className='object-contain flex-shrink-0'
+                            width={28}
+                            height={28}
                             onError={(e) => {
                               ;(e.currentTarget as HTMLImageElement).src =
                                 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="28" height="28"%3E%3Ctext y="22" font-size="20"%3E🏈%3C/text%3E%3C/svg%3E'
@@ -708,6 +712,8 @@ export default function PowerRankingsPage() {
                           <Image
                             src={`/teamrankingbars/${team.slug}_Ranking.png`}
                             alt={team.name}
+                            width={288}
+                            height={48}
                             className='absolute inset-0 w-full h-full object-cover'
                             onError={(e) => {
                               ;(
@@ -720,6 +726,8 @@ export default function PowerRankingsPage() {
                               <Image
                                 src={`/teamlogos/${team.slug}.png`}
                                 alt={team.name}
+                                width={36}
+                                height={36}
                                 className='h-9 w-9 object-contain flex-shrink-0 drop-shadow-xl'
                                 onError={(e) => {
                                   ;(e.currentTarget as HTMLImageElement).src =
